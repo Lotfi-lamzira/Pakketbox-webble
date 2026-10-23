@@ -1,0 +1,172 @@
+
+:root {
+    --background: #0d1423;
+    --card: #192437;
+    --text: #ffffff;
+    --muted: #9daac0;
+    --primary: #3977f6;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --border: #2c3a50;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: var(--background);
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.logo {
+    font-size: 46px;
+}
+
+h1 {
+    margin: 12px 0 5px;
+    font-size: 27px;
+}
+
+header p,
+footer {
+    color: var(--muted);
+}
+
+.card {
+    padding: 22px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--card);
+}
+
+.connection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: var(--danger);
+}
+
+.dot.connected {
+    background: var(--success);
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.connect-btn {
+    background: var(--primary);
+    padding: 12px 16px;
+}
+
+.lock-card {
+    text-align: center;
+    padding: 38px 20px;
+}
+
+.lock-icon {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.lock-card h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.lock-card p {
+    margin-top: 12px;
+    color: var(--muted);
+}
+
+h3 {
+    font-size: 16px;
+    margin: 0 0 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 18px 10px;
+    font-size: 16px;
+}
+
+.open-btn {
+    background: var(--success);
+}
+
+.close-btn {
+    background: var(--danger);
+}
+
+#notification {
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.activity-log {
+    max-height: 180px;
+    overflow-y: auto;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.activity-log p {
+    padding: 9px 0;
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+}
+
+footer {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 12px;
+}
+
+@media (max-width: 360px) {
+    body {
+        padding: 12px;
+    }
+
+    .connection {
+        flex-wrap: wrap;
+    }
+}

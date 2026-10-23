@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Pakketbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <div class="logo">📦</div>
+            <h1>Smart Pakketbox</h1>
+            <p>IoT Control Center</p>
+        </header>
+
+        <section class="card connection">
+            <div>
+                <span id="connectionDot" class="dot"></span>
+                <span id="connectionStatus">
+                    Niet verbonden
+                </span>
+            </div>
+
+            <button id="connectBtn" class="connect-btn">
+                Verbinden
+            </button>
+        </section>
+
+        <section class="card lock-card">
+
+            <div id="lockIcon" class="lock-icon">
+                🔒
+            </div>
+
+            <h2 id="lockStatus">Status onbekend</h2>
+
+            <p id="lockDescription">
+                Verbind met je pakketbox
+            </p>
+
+        </section>
+
+        <section class="card">
+
+            <h3>Bediening</h3>
+
+            <div class="button-group">
+
+                <button id="openBtn"
+                        class="action-btn open-btn"
+                        disabled>
+                    🔓 Openen
+                </button>
+
+                <button id="closeBtn"
+                        class="action-btn close-btn"
+                        disabled>
+                    🔒 Sluiten
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="card">
+
+            <h3>🔔 Laatste melding</h3>
+
+            <p id="notification">
+                Nog geen meldingen ontvangen.
+            </p>
+
+        </section>
+
+        <section class="card">
+
+            <h3>Activiteiten</h3>
+
+            <div id="activityLog" class="activity-log">
+                <p>Wachten op verbinding...</p>
+            </div>
+
+        </section>
+
+        <footer>
+            FireBeetle ESP32-E | BLE | millis()
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
